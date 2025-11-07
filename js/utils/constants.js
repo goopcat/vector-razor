@@ -1,0 +1,78 @@
+// Game Constants and Configuration
+const HS_KEY = 'vector_blaster_high_scores';
+
+// Scaling & Resolution
+const SIZE_BOOST = 1.1;
+const SIZE_INCREASE_MULTIPLIER = 1.2;
+const REFERENCE_WIDTH = 1600;
+const REFERENCE_HEIGHT = 900;
+
+// Gameplay Stats
+const POWERUP_DROP_CHANCE = 0.33;
+const SHIP_GRAVITY_RADIUS = 150;
+const SCORE_COLLECT_DUST = 1;
+const DRONE_SHIELD_MAX_HITS = 6;
+const SCORE_1UP_THRESHOLD = 10000;
+const COMBO_MAX_TIME = 5.0;
+const SHAKE_MAX_INTENSITY = 10;
+const INITIAL_DRONE_SPAWN_TIME = 10.0;
+const REINFORCEMENT_DRONE_SPAWN_TIME = 20.0;
+const FIRE_DELAY = 0.08;
+const BULLET_LIFE = 0.75;
+const TRIPLE_SHOT_LIFE_BOOST = 0.4;
+const TRIPLE_SHOT_DURATION = 15.0;
+const TRIPLE_SHOT_STACK = 10.0;
+const TRIPLE_SHOT_CAP = 35.0;
+const POWERUP_LIFE_MULT = 1.1;
+const POWERUP_SOLID_TIME = 10.0;
+const POWERUP_FADE_TIME = 10.0;
+const POWERUP_TOTAL_LIFE = POWERUP_SOLID_TIME + POWERUP_FADE_TIME;
+
+// Score & Asteroid Data
+const SCORE_DESTROY_ASTEROID = [0, 50, 100, 200, 500];
+const SCORE_DESTROY_DRONE = 1000;
+
+// Color Palette
+const COLOR_YELLOW = '#ffff00';
+const COLOR_ORANGE = '#ffaa00';
+const COLOR_GREEN = '#00ff7f';
+const COLOR_CYAN = '#00ffff';
+const COLOR_BLUE_ASTEROID = '#00aaff';
+const COLOR_DARK_CYAN = '#006666';
+const COLOR_MAGENTA = '#ff00ff';
+const COLOR_RED = '#ff4444';
+const COLOR_GREY_GREEN = '#558888';
+
+// Base Size Definitions
+const BASE_SIZES = {
+    SHIP_R: 15 * SIZE_BOOST * SIZE_INCREASE_MULTIPLIER,
+    BULLET_R: {
+        PLAYER: 3 * SIZE_BOOST,
+        PLAYER_TRIPLE: 1.5 * SIZE_BOOST,
+        DRONE: 3 * SIZE_BOOST,
+    },
+    ASTEROID_SIZE_MULT: 5 * SIZE_BOOST * SIZE_INCREASE_MULTIPLIER,
+    ASTEROID_SIZE: {
+        MEGA: 4,
+        LARGE: 3,
+        MEDIUM: 2,
+        SMALL: 1,
+    },
+    DRONE_R: 20 * SIZE_BOOST,
+    POWERUP_R: 15 * POWERUP_LIFE_MULT,
+    PARTICLE_R: 2,
+    BLASTER_SIZE: 4,
+    GRID_SIZE: 40,
+};
+
+// Movement and Physics
+const BULLET_SPEED = 500 * SIZE_BOOST;
+const BULLET_MAX = 200;
+const SHIP_THRUST = 300;
+const SHIP_TURN_SPEED = 3.5;
+const SHIP_FRICTION = 0.7;
+const ASTEROID_NUM = 6;
+const ASTEROID_MAX_SPD = 50;
+const DRONE_ORBIT_DISTANCE = 200;
+const DRONE_MAX_SPAWN = 2;
+const MAX_PARTICLES = 1000;

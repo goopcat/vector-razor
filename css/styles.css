@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Monospace&display=swap");
+
+:root {
+  --canvas-width: 800px;
+}
+
+body {
+  background-color: #0d0d0d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Monospace", monospace;
+  color: #ffffff;
+}
+
+/* Container to manage the size and centering of the game area */
+#game-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+canvas {
+  display: block;
+  border: 2px solid #00ffff;
+  background-color: #000000;
+}
+
+/* Menu Box - Wireframe Style */
+.menu-box {
+  background: rgba(0, 0, 0, 0.9);
+  border: 2px solid #00ffff;
+  box-shadow:
+    0 0 20px rgba(0, 255, 255, 0.5),
+    inset 0 0 10px rgba(0, 255, 255, 0.2);
+  padding: 30px 60px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 500px;
+  color: #ffff00;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-box h1 {
+  color: transparent;
+  text-shadow: none;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.menu-title-text {
+  color: #ffff00;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px #ffff00;
+}
+
+/* Menu Button - Wireframe Style */
+.menu-box button {
+  background: transparent;
+  color: #ffff00;
+  border: 2px solid #ffff00;
+  padding: 15px 30px;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #ffff00;
+  transition: all 0.2s;
+  font-family: inherit;
+  font-weight: bold;
+}
+
+.menu-box button:hover {
+  background: rgba(0, 255, 255, 0.1);
+  color: #00ffff;
+  box-shadow: 0 0 15px #00ffff;
+}
+
+.score-list {
+  list-style: none;
+  padding: 20px;
+  margin: 20px 0;
+  text-align: center;
+  width: 100%;
+  font-size: 16px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.score-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  color: #00ff7f;
+}
+
+.score-list li.new-high {
+  color: #ffff00;
+  text-shadow: 0 0 5px #ffff00;
+  font-weight: bold;
+}
+
+#menu-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
+/* Gameplay Title Styling (HTML element above canvas) */
+#gameplay-title {
+  position: absolute;
+  top: -30px;
+  width: 100%;
+  text-align: center;
+  font-family: "Monospace", monospace;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: transparent;
+  text-shadow:
+    0 0 5px #00ffff,
+    0 0 15px #ffaa00,
+    0 0 30px #00ffff;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+  z-index: 10;
+  display: none;
+}

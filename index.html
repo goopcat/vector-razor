@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VectorRazor: Neon Blaster</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="game-container">
+    <!-- Gameplay Title (visible only when playing) -->
+    <div id="gameplay-title">VectorRazor</div>
+
+    <canvas id="game-canvas"></canvas>
+
+    <div id="menu-overlay">
+      <!-- Start Menu is the default visible menu -->
+      <div id="start-menu" class="menu-box">
+        <p class="menu-title-text">VectorRazor</p>
+        <p>
+          Move: Arrow Keys or WASD<br />
+          Shoot: Space (Tap)<br />
+          Collect powerups and survive!
+        </p>
+        <button id="start-button" onclick="readyAndStartGame()">
+          START GAME
+        </button>
+      </div>
+
+      <!-- Game Over Menu: Populated with HTML list by JS -->
+      <div id="game-over-menu" class="menu-box" style="display: none;">
+        <p class="menu-title-text">VectorRazor</p>
+        <p id="final-score-text">FINAL SCORE: 0</p>
+        <h2 style="font-size: 1.2rem; color: #00ffff; text-shadow: 0 0 5px #00ffff; margin-top: 15px;">
+          HIGH SCORES
+        </h2>
+        <ul id="high-score-list" class="score-list"></ul>
+        <button onclick="readyAndStartGame()">PLAY AGAIN</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Core Game Scripts -->
+  <!-- Utils and Constants -->
+  <script src="js/utils/constants.js"></script>
+  <script src="js/utils/helpers.js"></script>
+  
+  <!-- Game Entities -->
+  <script src="js/entities/particle.js"></script>
+  <script src="js/entities/collectible.js"></script>
+  <script src="js/entities/rockEcho.js"></script>
+  <script src="js/entities/asteroid.js"></script>
+  <script src="js/entities/ship.js"></script>
+  <script src="js/entities/drone.js"></script>
+  <script src="js/entities/powerup.js"></script>
+  
+  <!-- Core Game Systems -->
+  <script src="js/core/renderer.js"></script>
+  <script src="js/core/drawGameObjects.js"></script>
+  <script src="js/core/gameState.js"></script>
+  <script src="js/core/entityManager.js"></script>
+  <script src="js/core/input.js"></script>
+  <script src="js/core/game.js"></script>
+</body>
+</html>
