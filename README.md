@@ -2,6 +2,12 @@
 
 A retro-style arcade space shooter with a modern neon aesthetic. Battle through waves of asteroids and enemy drones in this fast-paced action game.
 
+## Play Now
+
+🎮 **[Play VectorRazor on GitHub Pages](https://goopcat.github.io/vector-razor/)**
+
+No installation required - just click the link above to start playing immediately in your browser!
+
 ## Features
 
 - Smooth vector-style graphics with neon glow effects
